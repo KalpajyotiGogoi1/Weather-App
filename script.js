@@ -11,6 +11,7 @@ const apiKey = "b190efcce13e3288424d738881c82b78";
         const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
         if (response.status == 404) {
           document.querySelector(".error").style.display = "block";
+          weatherBox.style.display="none";  
         } else {
           document.querySelector(".error").style.display = "none";
           var data = await response.json();
